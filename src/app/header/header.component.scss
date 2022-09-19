@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    background-color: #EEE;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    padding: 2px;
+    &:hover {
+        background-color: rgb(181, 167, 255);
+        border-radius: 2px;
+    }
+}
+
+.active {
+    color: #666;
+    background-color: aquamarine;
+    border-radius: 2px;
+}

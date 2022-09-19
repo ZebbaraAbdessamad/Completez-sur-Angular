@@ -1,0 +1,20 @@
+<div class="face-snap-card" [ngClass]="{snapped: snapButton === 'dislike'}">
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <p>
+        <button (click)="onBack()">Back</button>
+        <a routerLink="/facesnaps">Back</a>
+    </p>
+    <p [ngStyle]="{color: 'red'}">{{ 4346234.36 | number:'0.0-1' }}</p>
+    <p> pourcentage (ex. : 0.336 = {{ 0.336 | percent:'0.1-1' }})</p>
+    <!-- 'chiffresMinAvantVirgule.chiffresMinAprèsVirgule-chiffresMaxAprèsVirgule' ex. :  '1.0-1 -->
+    <p>Mis en ligne le {{ faceSnap.createdDate |date: 'dd/MM/yy, à HH:mm' }}</p>
+    <p>Mis en ligne le {{ faceSnap.createdDate |date: 'longDate' }}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{ faceSnap.description }}</p>
+    <p>Money is {{ 344.36 | currency:'EUR' }}</p>
+    <span [ngStyle]="{ color: 'rgb(61, ' + faceSnap.snaps + ', 180)' }"> ❤ {{ faceSnap.snaps }}</span>
+    <p>
+        <button (click)="onSnap()">{{snapButton}}</button>
+    </p>
+    <h3 *ngIf="faceSnap.location"> 🏟 <i>{{faceSnap.location}}</i></h3>
+</div>
