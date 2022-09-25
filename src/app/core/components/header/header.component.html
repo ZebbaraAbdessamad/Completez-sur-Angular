@@ -1,7 +1,9 @@
 <header>
     <h1>snapface</h1>
     <nav>
+        <a routerLink="auth/login" routerLinkActive="active">Login</a>
         <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         <a routerLink="facesnaps" routerLinkActive="active">FaceSnaps</a>
+        <button (click)="onadd()">➕</button>
     </nav>
 </header>

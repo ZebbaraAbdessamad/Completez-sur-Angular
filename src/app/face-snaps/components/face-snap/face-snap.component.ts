@@ -1,8 +1,6 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { Router } from '@angular/router';
-import { FaceSnap } from '../models/face-snap.model';
-
-
+import { FaceSnap } from 'src/app/core/models/face-snap.model';
 @Component({
   selector: 'app-face-snap',
   templateUrl: './face-snap.component.html',

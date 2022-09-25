@@ -1,4 +1,4 @@
-<div class="face-snap-card" [ngClass]="{snapped: snapButton === 'dislike'}">
+<div *ngIf="faceSnap$ | async as faceSnap" class="face-snap-card" [ngClass]="{snapped: snapButton === 'dislike'}">
     <h2>{{ faceSnap.title | uppercase }}</h2>
     <p>
         <button (click)="onBack()">Back</button>
@@ -14,7 +14,7 @@
     <p>Money is {{ 344.36 | currency:'EUR' }}</p>
     <span [ngStyle]="{ color: 'rgb(61, ' + faceSnap.snaps + ', 180)' }"> ❤ {{ faceSnap.snaps }}</span>
     <p>
-        <button (click)="onSnap()">{{snapButton}}</button>
+        <button (click)="onSnap(faceSnap.id)">{{snapButton}}</button>
     </p>
     <h3 *ngIf="faceSnap.location"> 🏟 <i>{{faceSnap.location}}</i></h3>
 </div>
